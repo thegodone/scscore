@@ -30,8 +30,9 @@ class SCScorer():
         self.vars = []
         self.score_scale = score_scale
         self._restored = False
+        self.restore()
 
-    def restore(self, weight_path=os.path.join(project_root, 'models', 'full_reaxys_model_1024bool', 'model.ckpt-10654.as_numpy.pickle'), FP_rad=FP_rad, FP_len=FP_len):
+    def restore(self, weight_path=os.path.join(project_root, 'scscore', 'models', 'full_reaxys_model_1024bool', 'model.ckpt-10654.as_numpy.json.gz'), FP_rad=FP_rad, FP_len=FP_len):
         self.FP_len = FP_len; self.FP_rad = FP_rad
         self._load_vars(weight_path)
         print('Restored variables from {}'.format(weight_path))
