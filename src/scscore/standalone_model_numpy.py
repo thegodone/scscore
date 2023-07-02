@@ -35,7 +35,7 @@ class SCScorer():
     def restore(self, weight_path=os.path.join(project_root, 'scscore', 'models', 'full_reaxys_model_1024bool', 'model.ckpt-10654.as_numpy.json.gz'), FP_rad=FP_rad, FP_len=FP_len):
         self.FP_len = FP_len; self.FP_rad = FP_rad
         self._load_vars(weight_path)
-        print('Restored variables from {}'.format(weight_path))
+        #print('Restored variables from {}'.format(weight_path))
 
         if 'uint8' in weight_path or 'counts' in weight_path:
             def mol_to_fp(self, mol):
